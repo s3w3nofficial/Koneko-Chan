@@ -6,6 +6,7 @@ from scripts.ActionChosser import *
 from scripts.Actions import *
 from scripts.Respounder import *
 from scripts.wikiScrapper import *
+from scripts.MusicPlayer import *
 
 import speech_recognition as sr
 #import pyttsx
@@ -39,12 +40,9 @@ class news():
 class weather():
     def get_weather(self):
         pass
-        
-class MusicPlayer():
-    def play_music(self):
-        pass
 
 if __name__ == "__main__":
-    while True:
-        ActionChosser().chosser(main_parser().parse_rec(speechRec().listen_and_recognize())) #parse some text
+    while True: 
+        #ActionChosser().chosser(main_parser().parse_rec(speechRec().listen_and_recognize())) #parse some text
         #ActionChosser().chosser(main_parser().parse_rec("search for car"))
+        Respounder().respound("The quick brown nigga jumped over the lazy lukas")

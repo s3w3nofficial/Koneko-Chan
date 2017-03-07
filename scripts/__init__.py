@@ -1,1 +1,1 @@
-__all__ = ["Social", "Parser", "ActionChosser", "Actions", "Respounder", "wikiScrapper"]
+__all__ = ["Social", "Parser", "ActionChosser", "Actions", "Respounder", "wikiScrapper", "MusicPlayer"]

@@ -1,4 +1,4 @@
-social_grammer = ['how are you', 'do you like kkk']
+social_grammer = ['how are you', 'do you like something']
 
 class main_parser():
     def parse_rec(self, text):
@@ -8,7 +8,12 @@ class main_parser():
 
         call = []
         i = 0
+        play = False
         for word in text:
+            
+            if play == True:
+                call.append(word)
+
             if word == 'search' or word == 'find':
                 call.append('0')
             elif word == 'open' or word == 'run':
@@ -17,6 +22,10 @@ class main_parser():
                 break
             elif word == 'wake' or word == 'set alarm':
                 call.append('2')
+                break
+            elif word == 'play':
+                call.append('3')
+                play = True
                 break
 
     #search parser

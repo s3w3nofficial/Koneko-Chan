@@ -9,6 +9,8 @@ class ActionChosser():
             Actions().run_process(call[1])
         elif call[0] == '2':
             pass
+        if call[0] == '3':
+            Actions.PlayMusic(call[1])
         """
         elif call[0] == '3':
             Actions().social(call[1])
