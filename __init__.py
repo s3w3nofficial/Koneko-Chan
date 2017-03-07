@@ -46,5 +46,5 @@ class MusicPlayer():
 
 if __name__ == "__main__":
     while True:
-        #ActionChosser().chosser(main_parser().parse_rec(speechRec().listen_and_recognize())) #parse some text
-        ActionChosser().chosser(main_parser().parse_rec("search for car"))
+        ActionChosser().chosser(main_parser().parse_rec(speechRec().listen_and_recognize())) #parse some text
+        #ActionChosser().chosser(main_parser().parse_rec("search for car"))

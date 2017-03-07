@@ -1,6 +1,6 @@
 from scripts.Respounder import *
 
-social_grammer = ['how are you', 'do you like kkk']
+social_grammer = ['how are you', 'do you like something']
 
 class Social():
     def social(self, social):
@@ -19,5 +19,5 @@ class Social():
             Respounder.respound(respone[rnd])
         elif i == 1:
             rnd = random.randint(0, 1)
-            respone = ['yes i do', 'kkk is best']
+            respone = ['yes i do', 'yeah']
             Respounder.respound(respone[rnd])
