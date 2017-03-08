@@ -8,32 +8,28 @@ from scripts.Respounder import *
 from scripts.wikiScrapper import *
 from scripts.MusicPlayer import *
 from scripts.OS_PathManager import *
+from scripts.VoiceRec import *
 
-import speech_recognition as sr
+#import speech_recognition as sr
 #import pyttsx
 import os
 import sys
 #import subprocess
 #import wptools
 import random
+import time
+import thread
 
-class speechRec():
-    def listen_and_recognize(self):
-        sr.Recognizer()
-        with sr.Microphone() as source:
-            print("Listening!!!:")
-            audio = sr.Recognizer().listen(source)
-        try:
-            speech = sr.Recognizer().recognize_google(audio, language="en")
-            print("You said: " + speech)
-            return speech
-        except sr.UnknownValueError:
-            print("Google Speech Recognition could not understand audio")
-            return 'error'
-        except sr.RequestError as e:
-            print("Could not request results from Google Speech Recognition service; {0}".format(e))
-            return 'error'
-    
+class Thread():
+   #def myThread(self, threadName, delay):
+   def print_time( threadName, delay):
+        count = 0
+        while count < 5:
+            time.sleep(delay)
+            count += 1
+            print "%s: %s" % ( threadName, time.ctime(time.time()) )
+         
+""""    
 class news():
     def get_news(self):
         pass
@@ -41,6 +37,7 @@ class news():
 class weather():
     def get_weather(self):
         pass
+"""
 
 class other():
     def read_content_from_text_file(self, name):
@@ -50,9 +47,21 @@ class other():
         return r.read()
 
 if __name__ == "__main__":
+
+    # Create two threads as follows
+    try:
+        thread.start_new_thread( Thread().print_time, ("Thread-1", 2, ) )
+        thread.start_new_thread( Thread().print_time, ("Thread-2", 4, ) )
+    except:
+        print "Error: unable to start thread"
+    """
     while True: 
         #ActionChosser().chosser(main_parser().parse_rec(speechRec().listen_and_recognize())) #parse some text
         #ActionChosser().chosser(main_parser().parse_rec("search for car"))
         #Respounder().respound("The quick brown nigga jumped over the lazy lukas")
         #Respounder().respound(other().read_content_from_text_file("bible.txt"))
-        MusicPlayer().play_all()
+        #MusicPlayer().play_all()
+    """
+
+    while 1:
+        pass
