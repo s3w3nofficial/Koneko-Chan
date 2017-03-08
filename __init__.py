@@ -55,4 +55,4 @@ if __name__ == "__main__":
         #ActionChosser().chosser(main_parser().parse_rec("search for car"))
         #Respounder().respound("The quick brown nigga jumped over the lazy lukas")
         #Respounder().respound(other().read_content_from_text_file("bible.txt"))
-        MusicPlayer().play_music("D:\TEST.mp3")
+        MusicPlayer().play_all()

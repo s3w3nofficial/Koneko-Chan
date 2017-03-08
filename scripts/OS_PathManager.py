@@ -13,8 +13,8 @@ class OS_PathManager():
                 files[i] = "D:\\" + a
                 print a
             i -= 1
-        for file in files
-        print len(files)
+        for file in files:
+            print len(files)
         return files
 
 OS_PathManager().get_music_path()   

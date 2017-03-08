@@ -14,4 +14,4 @@ class MusicPlayer():
             playsound(s)
   
 #MusicPlayer().play_music("C:\Users\kyber\Desktop\Koneko-chan\Koneko-Chan\scripts\TEST.mp3")
-MusicPlayer().play_all()
+#MusicPlayer().play_all()
