@@ -18,16 +18,7 @@ import sys
 #import wptools
 import random
 import time
-import thread
-
-class Thread():
-   #def myThread(self, threadName, delay):
-   def print_time( threadName, delay):
-        count = 0
-        while count < 5:
-            time.sleep(delay)
-            count += 1
-            print "%s: %s" % ( threadName, time.ctime(time.time()) )
+import threading
          
 """"    
 class news():
@@ -45,23 +36,17 @@ class other():
         r = open(name)
         print r.read()
         return r.read()
-
-if __name__ == "__main__":
-
-    # Create two threads as follows
-    try:
-        thread.start_new_thread( Thread().print_time, ("Thread-1", 2, ) )
-        thread.start_new_thread( Thread().print_time, ("Thread-2", 4, ) )
-    except:
-        print "Error: unable to start thread"
-    """
+        
+def main():
     while True: 
         #ActionChosser().chosser(main_parser().parse_rec(speechRec().listen_and_recognize())) #parse some text
-        #ActionChosser().chosser(main_parser().parse_rec("search for car"))
+        ActionChosser().chosser(main_parser().parse_rec("play music"))
         #Respounder().respound("The quick brown nigga jumped over the lazy lukas")
         #Respounder().respound(other().read_content_from_text_file("bible.txt"))
         #MusicPlayer().play_all()
-    """
-
-    while 1:
-        pass
+        
+if __name__ == "__main__":
+    #t = threading.Thread(target=get_url, args = (q,u)) thread with args
+    t = threading.Thread(target=main())
+    t.daemon = True
+    t.start()

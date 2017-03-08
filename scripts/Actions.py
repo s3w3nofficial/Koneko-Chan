@@ -1,5 +1,6 @@
 from scripts.Respounder import *
 from scripts.wikiScrapper import *
+from scripts.MusicPlayer import *
 import subprocess
 
 class Actions():
@@ -23,7 +24,9 @@ class Actions():
         alarm_time += int(time_array[0]) * 3600
         alarm_time += int(time_array[1]) * 60
         #TODO set alarm
-        
+    def PlayMusic(self, name):
+        self.name = name
+        MusicPlayer().play_all() #tmp test
     def social(self, social):
         self.social = social
         Social().social(social)

@@ -26,7 +26,6 @@ class main_parser():
             elif word == 'play':
                 call.append('3')
                 play = True
-                break
 
     #search parser
             if word == 'for':

@@ -1,4 +1,5 @@
 from Actions import *
+from MusicPlayer import *
 
 class ActionChosser():
     def chosser(self, call):
@@ -10,7 +11,8 @@ class ActionChosser():
         elif call[0] == '2': #set alarm
             pass
         elif call[0] == '3': #music player
-            Actions.PlayMusic(call[1])
+            print call[1]
+            Actions().PlayMusic(call[1])
         """
         elif call[0] == '3': #social
             Actions().social(call[1])
