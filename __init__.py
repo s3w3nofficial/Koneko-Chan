@@ -7,6 +7,7 @@ from scripts.Actions import *
 from scripts.Respounder import *
 from scripts.wikiScrapper import *
 from scripts.MusicPlayer import *
+from scripts.OS_PathManager import *
 
 import speech_recognition as sr
 #import pyttsx
@@ -41,8 +42,17 @@ class weather():
     def get_weather(self):
         pass
 
+class other():
+    def read_content_from_text_file(self, name):
+        self.name = name
+        r = open(name)
+        print r.read()
+        return r.read()
+
 if __name__ == "__main__":
     while True: 
         #ActionChosser().chosser(main_parser().parse_rec(speechRec().listen_and_recognize())) #parse some text
         #ActionChosser().chosser(main_parser().parse_rec("search for car"))
-        Respounder().respound("The quick brown nigga jumped over the lazy lukas")
+        #Respounder().respound("The quick brown nigga jumped over the lazy lukas")
+        #Respounder().respound(other().read_content_from_text_file("bible.txt"))
+        MusicPlayer().play_music("D:\TEST.mp3")
